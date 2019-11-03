@@ -1,0 +1,56 @@
+/* 
+Navigation style sheet
+
+This was separated because at the time I was experimenting with different navigation layouts.
+*/
+
+.nav-container {
+    /* background: #0f1210; */
+    text-decoration: none;
+    position: fixed;
+    width: 100vw;
+    top: 0%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-logo {
+    width: fit-content;
+    height: 100%;
+    margin: auto 0%;
+    margin-left: 2%;
+    /* display: flex; */
+    text-decoration: none;
+}
+
+.brand-logo .img-icon {
+    width: 90%;
+    max-width: 75px;
+    min-width: 50px;
+    height: auto;
+    margin: 5% 0;
+}
+
+.menu-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;    
+}
+
+.burger-right {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 4%;
+}
+
+.nav-link {
+    color: var(--theme-col0, #000457);
+    text-align: center;
+    align-self: center;
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+}
