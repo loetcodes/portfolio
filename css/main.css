@@ -1,29 +1,25 @@
 /* MAIN STYLE SHEET FOR PORTFOLIO SITE */
 
-
 * {
     font-family: Gotham XNarrow A,Gotham XNarrow B,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
-    --text-headings: #d70757;
-}
-
-li {
-    list-style: none;
-    margin-top: 4%;
-    margin-bottom: 4%; 
-}
-
-a {
-    text-decoration: none;
-}
-
-body {
-    background-color: #020202;
-    background-image: url("../images/graphics/dark-mosaic_darker.png");
-    background-size: auto;
-    color: #f5deb3;
-    width: 100%;
-    margin: 0;
+    --text_headings: #d70757;
+    --text_col0: #242424;
+    --text_col1: #f5deb3;
+    --text_col2: #E9EAEC;
+    --background-col0: #000;
+    --background-col1: #FBF8F8;
+    --background-col2: #E3E4E4;
+    --background-col3: #FFFAF3;
+    --theme_col0: #000457;
+    --theme_col_v2: #1a1a1a;
+    --theme_col1: #391F84;
+    --theme_col2: #18064A;
+    --theme_col3: #404040;
+    --theme_col4: #242424;
+    --theme_col5: #a17f00;
+    --border_col: #dcdcdc;
+    --gradient_start:var(--background-col1);
 }
 
 .page {
@@ -36,906 +32,819 @@ body {
 
 :target {
     display: block;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 :target ~ .default-page {
     display: none;
 }
 
-.home-view {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
+li {
+    list-style: none;
+    margin-top: 4%;
+    margin-bottom: 4%; 
 }
 
-.landing-page {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: url("../images/graphics/Astronauts_2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.arrow-img {
-    width: 25%;
-    max-width: 55px;
-}
-
-.scroll-tip {
-    display: flex;
-    justify-content: space-around;
-    transform: rotate(90deg);
-    position: absolute;
-    bottom: 5%;
-    right: -5%;
-}
-
-.landing-page .scroll-tip {
-    display: flex;
-    justify-content: space-around;
-    transform: rotate(90deg);
-    position: absolute;
-    bottom: 10%;
-    right: -17%;
-}
-
-.scroll-tip .tip-text {
-    font-size: 0.9em;
-}
-
-.intro-nav {
-    width: 80%;
-    height: 75vh;
-    margin: 15vh 10% 5vh 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.menu-link {
-    background: #171717;
-    background: #090909;
-    background: #151515;
-    background-image: url("../images/graphics/dark-mosaic.png");
-    background-size: cover;
-    height: 22vh;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-details {
-    width: 75%;
-    align-self: center;
-    color: #f5deb3;
-    font-size: 4vmin;
-    text-align: center;
+a {
+    text-decoration: none;
     letter-spacing: 2px;
 }
 
-.nav-details h3{
-    font-size: 1.5em;
-    color: #d70757;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    text-align: center;
+body {
+    width: 100%;
     margin: 0;
+    color: #242424;
+    background-color: var(--background-col2);
+}
+
+.main-summary {
+    height: 100vmax;
+    width: 100%;
+    display: grid;
+    grid-template: 35% 22% 35% 8% / 20% 80%;
+    grid-template: 32% 25% 35% 8% / 20% 80%;
+}
+
+.about-view .main-summary {
+    height: 100vh;
+    border-bottom: 2px solid #dcdcdc;
+    border-bottom-color: var(--border_col);
 }
 
 .intro-greeting {
-    width: 80%;
-    margin-left: 10%;
+    background-color: var(--background-col0);
+    background-image: url("../images/graphics/astronaut_3.png");
+    background-size: 175%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-y: 25%;
+    grid-row: 1;
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;   
 }
 
 .intro-greeting h2 {
+    color: var(--text_col1);
+    align-self: center;
     text-align: center;
-    font-size: 20vmin;
-    color: #d70757;
+    font-size: 6em;
+    letter-spacing: 4px;
 }
 
-.intro-details {
-    width: 85%;
-    margin: 0% 5%;
-    position: relative;
-    bottom: 4%;
-    background: #000000f0;
-    background-image: url("../images/graphics/dark-mosaic.png");
-    background-size: cover;
+.intro-name {
+    background-color: var(--theme_col0);
+    grid-row: 2;
+    grid-column: 1 / 5;
     display: flex;
-    flex-direction: column;
-    align-self: center;
+    justify-content: center;  
 }
 
 .name-box {
     align-self: center;
+    color: var(--text_col2);
+    margin: 2%;
 }
 
 .name-box h1 {
-    font-size: 15vmin;
-    letter-spacing: 2px;
-    text-align: center;
+    font-size: 3em;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.name-box span {
     display: inline-block;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+
+.intro-summary {
+    grid-row: 2 / 4;
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+}
+
+.detailText {
+    font-size: 3vmin;
+    letter-spacing: 1.5px;
+    line-height: 1.6em;
+}
+
+.descrBox {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 85%;
+}
+
+.intro-summary .descrBox {
+    background: linear-gradient(180deg, var(--gradient_start), transparent);
+}
+
+.intro-summary .detailText {
+    align-self: center;
+    width: 85%;
+    margin-top: 5%;
     margin-bottom: 5%;
 }
 
-.name-box span{
-    font-size: 7vmin;
-    display: inline-block;
-    transform: rotate(-90deg);
-    position: relative;
-    bottom: 5%;
+.intro-contact {
+    background-color: var(--theme_col3);
+    grid-row: 4;
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 
-.descr-box {
-    font-size: 4.2vmin;
+.default-page .intro-summary {
+    grid-row: 3;
+    grid-column: 1 / 3;
+}
+
+.default-page .intro-summary p {
     letter-spacing: 2px;
-    margin-left: 15%;
-    margin-right: 0%;
-}
-
-.landing-page .descr-box {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 10%;
-}
-
-.highlight-text {
-    color: #00e7bf;
-    color: #d70757;
-    font-weight: 700;
-}
-
-.page-footer {
-    background: black;
     text-align: center;
-    margin: 5% 0 0 0;
-    padding: 2% 0%;
-    letter-spacing: 1px;
+}
+
+.social-link {
+    font-size: 2vmin;
+    color: var(--text_col1);
+    align-self: center;
+}
+
+.social-icon {
+    width: 25px;
+    filter: opacity(0.7);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.social-icon:hover {
+    filter: drop-shadow(2px 4px 4px #000); 
+}
+
+.main-summary .social {
+    grid-row: 4;
+    grid-column: 1 / 3;
+    align-self: end;
+    display: flex;
+    justify-content: space-evenly;
+    background: var(--theme_col0);
+    visibility: hidden;
+}
+
+.contacts-view .social {
+    visibility: visible;
 }
 
 .summary {
+    height: 100vmax;
     display: grid;
-    grid-template: 15% 10% 70%/ 25% 55% 10% 10%;
-    grid-template: auto / 25% 55% 10% 10%;
-    grid-column-gap: 0;
-    grid-row-gap: 0%;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    margin: 5% 0;
+    grid-template: 35% 35% 30% / 20% 20% 10% 10% 40%;
+    grid-template: 25% auto / 40% 60%;
 }
 
-.contacts-view .summary {
-    height: 95vh;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.background-text {
-    font-size: 2.4em;
-    font-size: 10vmin;
-    letter-spacing: 2px;
-    color: #404040;
-    /*position: relative;
-    left: 3%;
-    bottom: 4%;*/
-    grid-column: 1;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    overflow-wrap: break-word;
-    align-self: center; 
-}
-
-.background-text p {
-    margin-top: 4%;
-    margin-bottom: 4%;
-    margin-left: 6%;
-}
-
-.main-about .background-text {
-    display: none;
-}
-
-.section-title {
-    display: block;
-    text-align: right;
-    margin-right: 2%;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    align-self: center;
-}
-
-.section-title h2 {
-    font-size: 2.5em;
-    font-size: 10vmin;
-    margin: 0;
-    color: #d70757;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-}
-
-.section-title p {
-    width: 40%;
-    margin-left: 55%;
-    margin-right: 2%;
-    font-size: 1em;
-    font-size: 3vmin;
-    letter-spacing: 2px;
-    line-height: 1.8em;
-    background: #131313;
-    padding: 2%;
-}
-
-.main-about .section-title, .main-projects .section-title, .main-contacts .section-title {
-    align-self: start;
-}
-
-.section-info {
-    grid-row: 3;
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-
-.about-core, .about-skills {
-    width: 100%;
+.section-heading {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
-    margin-left: 8%;
+    grid-column: 1 / 3;
+    align-items: center;
 }
 
-.about-skills > *, .about-core > * {
-    flex: 1 1 34%;
-    font-size: 1.1em;
-    font-size: 4vmin;
-    letter-spacing: 2px;
-    margin: 5% 4% 4% 4%;
-}
-
-.about-core > *{
-    flex: 1 1 40%;
-}
-
-.skills-list {
-    padding-left: 0%;
-    margin-left: 5%;
-    margin-top: 2%;
-}
-
-.contact-links{
-    grid-row: 4;
-    grid-column: 2;
-    width: 70%;
-    align-self: center;
-    position: relative;
-    left: 10%;
+.projectsDisplay{
     display: grid;
-    grid-template: 45% 45% / 100%;
-    grid-row-gap: 25%;
+    grid-template: 32vh auto/ 5% 90% 5%
+}
+
+.projectsContainer {
+    grid-row-start: 2;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content:space-around;
+    padding-top: 15%;
+}
+
+.headingView {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pageTitle {
+    color: var(--text_col1);
+    background-color: var(--theme_col0);
+    background-image: url("../images/graphics/Elements-Free-PNG-Image.png");
+    background-size: cover;
+}
+
+.pageTitle h2 {
+    text-align: center;
+    font-size: 15vmin;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+    margin: 0;
+}
+
+.subtitle {
+    width: 40%;
+    font-size: 3.5vmin;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.chat-button {
+    grid-row: 3;
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 5%;
 }
 
 .mail-box {
     width: fit-content;
-    align-self: center;
-    justify-self: center;
-    padding: 4% 20%;
-    border-radius: 40px;
-    background: #d70757;
-    text-decoration: none;
-    color: #f5deb3;
-    font-size: 1.4em;
-    font-size: 4.5vmin;
-}
-
-/* For links below contact button
-.social-links {
-    width: 100%;
-    align-self: center;
-    display: flex;
-    justify-content: space-around;
-}*/
-
-.social-links {
-    position: absolute;
-    width: 25%;
-    right: -75%;
-    align-self: center;
-}
-
-.projects-view .social-links {
-    width: 15%;
-    left: 2%;
-    bottom: 2%;
-}
-
-.social-icon {
-    width: 100%;
-    max-width: 30px;
-    min-width: 20px;
-    margin: 15%;
+    background: var(--theme_col1);
+    padding: 10px 20px;
+    color: var(--text_col1);
+    font-weight: 700;
+    border-radius: 5px;
 }
 
 .mail-box:hover {
-    background: #404040;
+    background: var(--theme_col4);
 }
 
-/* Media Queries */
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1 / 5;
+    grid-row: 2;
+    background-color: var(--background-col3);
+    justify-content: center;
+}
 
-/* Extending to larger mobiles above 425px */
-@media only screen and (min-width: 425px) {
-    .intro-greeting h2 {
-        font-size: 8em;
+.about-core {
+    padding: 10% 5% 5% 10%;
+}
+
+.about-core > * {
+    flex: 1 1 40%;
+    font-size: 3vmin;
+    letter-spacing: 2px;
+    margin: 2% 4% 2% 4%;
+    justify-content: space-around;
+}
+
+.about-skills {
+    display: grid;
+    grid-template: 40% 35% 25% / 100%;
+    background-color: var(--theme_col4);
+    color: var(--text_col2);
+}
+
+.skill-row {
+    display: grid;
+    grid-template: 100% / 30% 65%;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.about-skills .skill-row:nth-child(odd) {
+    background-color: var(--theme_col2);
+}
+
+.about-skills .skill-row:nth-child(2) {
+    background-color: var(--theme_col1);
+}
+
+.skill-group {
+    width: 92%;
+    word-wrap: break-word;
+    font-size: 4.6vmin;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-list > * {
+    flex: 1 1 50%;
+    font-size: 3vmin;
+    letter-spacing: 2px;
+}
+
+.title {
+    border-top: 3px solid var(--theme_col4);
+    border-bottom: 3px solid var(--theme_col4);
+    font-size: 8vmin;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.title p {
+    margin: 12% 0%;
+}
+
+.back-detail {
+    display: none;
+    grid-row: 3;
+    grid-column: 2;
+    width: fit-content;
+    height: fit-content;
+}
+
+.projectImg {
+    width: 94%;
+    height: 100%;
+    margin: 0 3%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cardImg {
+    width: 55%;
+}
+
+.cardDetails {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardTile {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    height: 48vmax;
+    max-height: 800px;
+    align-self: center;
+    background-color: #d6d6d6;
+    padding: 5%;
+    margin-bottom: 15%;
+    text-align: right;
+    box-shadow: 0px 2px 10px -2px #5c5c5c;
+}
+
+.cardTile:nth-child(odd) {
+    flex-direction: row-reverse;
+    text-align: left;
+}
+
+.cardTile:nth-child(odd) .cardSummary {
+    align-self: flex-start;
+}
+
+.cardTile:nth-last-child(1) {
+    height: auto;
+    width: 95%;
+    background: none;
+    box-shadow: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.projectTitle {
+    font-size: 4vmin;
+    letter-spacing: 2px;
+    margin: 2% 0;    
+}
+
+.projectType {
+    font-size: 2.6vmin;
+    letter-spacing: 2px;
+    margin: 1% 0;
+    color: var(--theme_col1);
+}
+
+.projectTech {
+    display: flex;
+    flex-wrap: wrap;   
+}
+
+.projectTech span {
+    margin-right: 4%;
+    color: var(--theme_col2);
+    font-size: 2.5vmin;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.projectLink {
+    font-size: 3vmin;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--theme_col2);
+    text-transform: uppercase;
+}
+
+.cardSummary {
+    position: relative;
+    width: 140%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 6% 0%;
+    align-self: flex-end;
+    background-color: var(--theme_col4);
+    color: var(--text_col2);
+}
+
+.moreHeading {
+    align-self: center;
+    width: 45%;
+    margin-right: 5%;
+}
+
+.moreContent {
+    background: var(--theme_col0);
+    padding: 5%;
+    align-self: center;
+}
+
+.moreTextBox {
+    color: var(--text_col2);
+}
+
+.moreLinks {
+    width: 100%;
+    height: 30%;
+    margin-top: 5%;
+}
+
+.textIcon {
+    height: 7vmin;
+    margin: 5% 4%;
+}
+
+
+@media only screen and (min-width: 620px) {
+    a {
+        font-size: 1.2em;
+    }
+    .detailText {
+        font-size: 1.1em;
     }
 
-    .nav-details {
+    .social-link {
         font-size: 1em;
     }
 
-    .nav-details h3 {
-        font-size: 1.4em;
-    }
-
-    .name-box h1 {
+    .pageTitle h2 {
         font-size: 5em;
     }
-    
-    .name-box span{
-        font-size: 2em;
-    }
 
-    .descr-box {
+    .subtitle {
         font-size: 1.2em;
     }
 
-    .about-main .descr-box {
-        max-width: 500px;
-    }
-
-    .landing-page .descr-box {
-        margin-left: 10%;
-        margin-right: 10%;
-        align-self: center;
-    }
-
-    .landing-page .scroll-tip {
-        bottom: 10%;
-        right: -12%;
-    }
-
-    .section-title h2 {
+    .title {
         font-size: 3em;
-        margin: 0;
     }
-    
-    .section-title p {
+
+    .about-core > * {
         font-size: 1em;
     }
 
-    .about-core, .about-skills {
-        margin-left: 10%;
+    .skill-group {
+        font-size: 2em;
+        transform: rotate(0deg);
+        margin-left: 8%;
+        text-align: center;
+    }
+    
+    .skills-list > * {
+        font-size: 1em;
     }
 
-    .about-skills > *, .about-core > * {
-        font-size: 1.1em;
-        margin: 6% 5%;
+    .projectTitle {
+        font-size: 1.4em;  
+    }
+    
+    .projectType {
+        font-size: 1em;
     }
 
-    .mail-box {
-        font-size: 1.4em;
-    } 
-
-    .social-links {
-        width: 20%;
-        right: -80%;
+    .projectTech span {
+        font-size: 1em;
     }
+    
+    .projectLink {
+        font-size: 1.2em;
+    }
+
+    .textIcon {
+        height: 1.55em;
+        margin: 5% 4%;
+    }
+
+    .social-icon {
+        width: 30px;
+    }
+
 }
 
 /* Extending to tablet screens */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
+    /* Changing only the landing page design screen */
+    .main-summary {
+        height: 100vh;
+    }
+}
+
+
+/* Extending to laptop screens */
+@media only screen and (min-width: 1024px) {
+    /*Just above the 1024 boundary*/
+    .main-summary {
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template: 65% 35% / 20% 20% 10% 10% 40%;
+    }
+
     .intro-greeting h2 {
         font-size: 10em;
     }
-    .intro-details {
-        width: 75%;
+    
+    .name-box {
         align-self: center;
-        max-width: 800px;
-    }
-
-    .intro-nav {
-        width: 98vw;
-        height: 80vh;
-        margin: 5vh 0%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        color: var(--text_col2);
+        margin: 2%;
     }
     
-    .menu-link {
-        height: -webkit-fill-available;
-        width: 28vw;
-    }
-    
-    .nav-details {
-        width: 80%;
-        align-self: center;
-        color: #f5deb3;
-        font-size: 1.2em;
-    }
-
-    .landing-page .descr-box {
-        font-size: 1.4em;
-    }
-
-    .landing-page .scroll-tip {
-        bottom: 10%;
-        right: -15%;
-    }
-
-    .background-text {
+    .name-box h1 {
         font-size: 5em;
     }
 
-    .descr-box {
-        max-width: 500px;
-        align-self: center;
-    }
-
-    .contacts-main .descr-box {
-        margin: 0;
-    }
-
-    .contacts-main {
-        grid-column-end: 5;
-        display: flex;
-        justify-content: center;
-    }
-
-    .section-title h2 {
-        font-size: 3em;
-    }
-
-    .section-title p {
-        width: 35%;
-        margin-left: 60%;
-        margin-right: 2%;
-        font-size: 1.2em;
-    }
-
-    .about-skills > *, .about-core > * {
-        font-size: 1.2em;
-        margin: 6% 5%;
-    }
-
-    .page-footer {
-        margin: 0;
-    }
-}
-
-/* Extending to larger laptop screens */
-@media only screen and (min-width: 1024px) {
-    .landing-page .scroll-tip {
-        bottom: 10%;
-        right: 0%;
-    }
-
-    .landing-page {
-        flex-direction: row;
-    }
-
-    .intro-greeting {
-        width: 90%;
-        background: url("../images/graphics/Astronauts_2.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    .intro-greeting h2 {
-        font-size: 12em;
-        text-align: right;
-    }
-
-    .intro-details {
-        width: 70vw;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        bottom: 0;
-    }
-
-    .landing-page .descr-box {
-        margin: 5%;
-        font-size: 1.6em;
-        width: 80%;
-        align-self: center;
-        text-align: center;
-    }
-
     .name-box span {
-        font-size: 2.4em;
+        font-size: 2.5em;
     }
-
-    .name-box h1 {
-        font-size: 5.5em;
-        margin-bottom: 10%;;
-    }
-
-    .nav-details h3 {
-        font-size: 1.6em;
-    }
-
-    .main-about .background-text {
-        display: inline-block;
-        width: 70%;
-    }
-
-    .summary {
-        grid-template: auto/40% 60%;
-    }
-
-    .background-text {
-        grid-column: 1;
-    }
-
-    .section-title {
-        grid-row: 1;
-        grid-column-start: 2;
-        grid-column-end: 3;
-    }
-
-    .section-info {
-        grid-row: 2;
+    
+    .intro-summary {
+        grid-row: 1 / 3;
+        grid-column: 3 / 6;
         display: flex;
         justify-content: center;
-        grid-column-start: 2;
-        grid-column-end: 3;
+    }
+    
+    .detailText {
+        font-size: 1.1em;
+        line-height: 1.6em;
     }
 
-    .about-core, .about-skills {
-        margin-left: 0;
-    }
-
-    .descr-box {
-        font-size: 1.4em;
-        line-height: 1.4em;
-        margin-left: 5%;
-        margin-right: 15%;
-    }
-
-    .about-main .descr-box {
-        max-width: 700px;
-    }
-
-    .main-about .background-text {
-        width: 96%;
-        color: #404040c7;
-        background-image: url("../images/graphics/Astronauts_2.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    .background-text {
-        font-size: 6em;
-    }
-
-    .about-skills > *, .about-core > * {
-        font-size: 1.2em;
-        margin: 6% 8% 6% 0%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Extending to larger laptop screens */
-
-
-@media only screen and (min-width: 4444px) {
-
-
-
-
-    .arrow-img {
-        width: 25%;
-        max-width: 55px;
-    }
-
-    .scroll-tip {
+    .intro-contact {
+        background-color: var(--theme_col3);
+        grid-row: 2;
+        grid-column: 5;
         display: flex;
         justify-content: space-around;
-        transform: rotate(90deg);
-        position: absolute;
-        bottom: 10%;
-        right: 5%;
+        align-items: flex-end;
+    }
+    
+    .default-page .intro-summary {
+        grid-row: 1;
+        grid-column: 5;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .default-page .intro-summary p {
+        font-size: 1.4em;
+        letter-spacing: 2px;
+        text-align: left;
     }
 
-    .scroll-tip .tip-text {
+    .social-link {
+        margin-bottom: 4%;
+        align-self: flex-end;
+    }
+
+    .main-summary .social {
+        grid-row: 2;
+        grid-column: 1 / 3;
+        align-self: end;
+        display: flex;
+        justify-content: space-evenly;
+        visibility: visible;
+        background: none;
+    }
+    
+    .summary {
+        height: 100vh;
+        display: grid;
+        grid-template: 35% 35% 30% / 20% 20% 10% 10% 40%;
+    }
+
+    .projectsDisplay{
+        display: grid;
+        grid-template: 8% 4% 2% auto / 10% 30% 10% 20% 20% 10%;
+        grid-template: 40vh 20vh 5vh 15vh 20vh auto / 10% 30% 10% 20% 20% 10%;
+    }
+    
+    .projectsContainer {
+        grid-row-start: 4;
+        grid-row-end: 8;
+        grid-column: 2 / 6;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content:space-around;
+        padding-top: 0%;
+    }
+    
+    .headingView {
+        grid-column: 1 / 3;
+        grid-row: 1 / 6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .pageTitle h2 {
+        font-size: 5.5em;
+    }
+    
+    .subtitle {
+        width: 60%;
         font-size: 1.2em;
     }
 
-    .intro-nav {
-        width: 60%;
-        height: 78vh;
-        margin: 12vh 20% 10vh 20%;
+    .chat-button {
+        grid-row: 2;
+        grid-column: 3 / 6;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 10%;
+    }
+    
+    .mail-box {
+        width: fit-content;
+        padding: 15px 40px;
+        border-radius: 25px;
+    }
+    
+    .mail-box:hover {
+        background: var(--theme_col4);
+    }
+    
+    .section-heading {
+        grid-row: 1 / 3;
+        grid-column: 1 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 75%;
+        margin-top: 20%;
+        margin-left: 5%;
+        justify-content: flex-start;
+    }
+    
+    .section-content {
+        display: flex;
+        flex-wrap: wrap;
+        grid-column: 3 / 6;
+        grid-row: 1 / 4;
+        justify-content: center;
+    }
+
+    .about-core {
+        padding: 15% 5% 5% 10%;
+    }
+
+    .about-core > * {
+        flex: 1 1 40%;
+        font-size: 1.1em;
+        letter-spacing: 2px;
+        margin: 2% 4% 2% 4%;
+        justify-content: space-around;
+    }
+
+    .about-skills {
+        display: grid;
+        grid-template: 40% 30% 30% / 100%;
+    }
+    
+    .skill-row {
+        display: grid;
+        grid-template: 100% / 35% 60%;
+        grid-gap: 5%;
+        align-items: center;
+    }
+
+    .skill-group {
+        width: 80%;
+        margin-left: 5%;
+    }
+
+    .skills-list > * {
+        flex: 1 1 50%;
+        font-size: 1.1em;
+        letter-spacing: 2px;
+    }
+
+    .title {
+        font-size: 4em;
+    }
+
+    .back-detail {
+        display: block;
+    }
+    
+    .back-text {
+        background-color: var(--theme_col4);
+        color: var(--text_col2);
+        font-size: 2.2em;
+        letter-spacing: 4px;
+        padding: 3% 6%;
+        position: relative;
+        bottom: 10%;
+    }
+
+    .cardImg {
+        width: 55%;
+    }
+    
+    .cardDetails {
+        width: 45%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-
-    .menu-link {
-        background: #171717;
-        background: #090909;
-        background: #151515;
-        background-image: url("../images/graphics/dark-mosaic.png");
-        background-size: cover;
-        height: 22vh;
-        display: flex;
-        justify-content: center;
-    }
-
-    .nav-details {
-        width: 75%;
-        align-self: center;
-        color: #f5deb3;
-        font-size: 1.2em;
-        letter-spacing: 2px;
-    }
-
-    .nav-details h3{
-        font-size: 1.5em;
-        color: #d70757;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        text-align: center;
-        margin: 0;
-    }
-
-    .section-title {
-        display: block;
-        text-align: right;
-        margin-right: 2%;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        grid-column-start: 2;
-        grid-column-end: 5;
-    }
-
-    .section-title h2 {
-        font-size: 4em;
-        margin: 0;
-        color: #d70757;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-    }
-
-    .section-title p {
-        width: 30%;
-        margin-left: 65%;
-        margin-right: 2%;
-        font-size: 1.2em;
-        letter-spacing: 2px;
-        line-height: 1.8em;
-        background: #380013;
-        padding: 2%;
-    }
-
-    .section-info {
-        grid-row: 3;
-        grid-column-start: 2;
-        grid-column-end: 4;
-    }
-
-    .about-core, .about-skills {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .contacts-main {
-    }
-
-    .about-skills > * {
-        flex: 1 1 34%;
-        font-size: 1.2em;
-        letter-spacing: 2px;
-        margin: 5% 4% 4% 4%;
-    }
-
-    .about-core > *{
-        flex: 1 1 40%;
-        font-size: 1.1em;
-        letter-spacing: 2px;
-        margin: 5% 4% 4% 4%;
-    }
-
-    .skills-list {
-        padding-left: 15%;
-        margin-left: 5%;
-        margin-top: 2%;
-    }
-
-    .contact-links{
-        grid-row: 4;
-        grid-column: 2;
-        width: 70%;
-        align-self: center;
-        position: relative;
-        left: 10%;
-        display: grid;
-        grid-template: 45% 45% / 100%;
-        grid-row-gap: 25%;
-    }
-
-    .mail-box {
-        width: fit-content;
-        align-self: center;
-        justify-self: center;
-        padding: 3% 12%;
-        border-radius: 50px;
-        background: #d70757;
-        text-decoration: none;
-        color: #f5deb3;
-        font-size: 1.4em;
-    }
-
-    .social-links {
-        width: 100%;
-        align-self: center;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .social-links a {
-        margin: 5% 7%;
-    }
-
-    .mail-box:hover {
-        background: #404040;
-    }
-
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*BEFORE*/
-    .intro-greeting {
-        width: 80%;
-        margin-left: 10%;
+    .cardTile {
+        height: 45vh;
+        max-height: 800px;
     }
 
-    .intro-greeting h2 {
-        text-align: center;
-        font-size: 10em;
-        color: #d70757;
+    .cardSummary {
+        height: 15vh;
     }
-
-    .intro-details {
-        width: 84%;
-        margin: 0% 8%;
-        position: relative;
-        bottom: 4%;
-        background: #000000f0;
-        background-image: url("../images/graphics/dark-mosaic.png");
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .name-box {
-        margin-left: 20%;
-    }
-
-    .name-box h1 {
-        font-size: 5.5em;
-        letter-spacing: 2px;
-        text-align: center;
-        display: inline-block;
-        margin-bottom: 5%;
-    }
-
-    .name-box span{
-        font-size: 2.5em;
-        display: inline-block;
+    
+    .moreHeading {
         transform: rotate(-90deg);
-        position: relative;
-        bottom: 5%;
+        align-self: center;
+    }
+    
+    .moreContent {
+        width: 65%;
+        padding: 5%;
     }
 
-    .descr-box {
-        font-size: 1.2em;
-        letter-spacing: 2px;
-        margin-left: 20%;
-        margin-right: 15%;
+    .moreLinks {
+        margin-top: 10%;
     }
-
-    .section-info .descr-box {
-        margin-left: 5%;
-        margin-right: 15%;
+    
+    .textIcon {
+        height: 4vh;
+        margin: 4%;
+        max-width: 220px;
+        max-height: fit-content;
     }
+    
+    
+}
 
-    .highlight-text {
-        color: #00e7bf;
-        color: #d70757;
-        font-weight: 700;
-    }
 
-     /*.main-about, .main-core, .main-skills {
-        height: 90vh;
-        padding: 5vh 0;
-        margin: 5% 0;
-        display: flex;
-        flex-direction: column;
-    } */
 
-    .summary {
-        height: 100vh;
-        /*padding: 5vh 0;*/
-        margin: 5% 0;
-        display: grid;
-        grid-template: 15% 10% 70%/ 25% 55% 10% 10%;
-        grid-template: auto / 25% 55% 10% 10%;
-        grid-column-gap: 0;
-        grid-row-gap: 0%;  
-    }
 
-    .background-text {
-        font-size: 3.6em;
-        letter-spacing: 2px;
-        color: #404040;
-        /*position: relative;
-        left: 3%;
-        bottom: 4%;*/
-        grid-column: 1;
-        grid-row: 1;
-        grid-row-start: 2;
-        grid-row-end: 4;
-        overflow-wrap: break-word; 
-    }
 
-    .background-text p {
-        margin-top: 4%;
-        margin-bottom: 4%;
-        margin-left: 10%;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extending to larger desktop screens */
+@media only screen and (min-width: 4444px) {
+
 }
