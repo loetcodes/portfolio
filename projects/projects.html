@@ -3,200 +3,29 @@
 <head>
 	<title>Loet Projects</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../css/navigation_top.css">
-	<link rel="stylesheet" href="../css/projects_page.css">
+	<link rel="stylesheet" href="../css/navigation.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/projects.css">
 </head>
-<body class="main-body">
-
-	<!-- MAIN PORTFOLIO NAVIGATION MENU -->
-	<div id="menu-bar" class="menu-container">
-		<a href="index.html#home" id="main-logo" class="brand-logo">
+<body>
+	<!-- Logo and menu navigation -->
+	<nav id="nav-bar" class="nav-container">
+		<a href="../index.html" id="main-logo" class="brand-logo">
 			<img class="img-icon" src="../images/icons/loet_wheat_logo.png" alt="loet logo">
 		</a>
-
-		<nav id="navigation" class="menu-links">
-			<a href="index.html#about">About</a>
-			<a href="index.html#projects">Projects</a>
-			<a href="index.html#blog">Blog</a>
-			<a href="index.html#contact">Contact</a>
-		</nav>
-	</div>
-
-
-	<!-- SECOND PROJECT -->
-	<section id="blogging-app" class="page">
-		<!-- Project Landing View -->
-		<div class="home-section project-home">
-			<div class="hero-left">
-				<div class="project-heading">
-					<h2 class="project-title">DecodeSpace</h2>
-					<p class="project-subtitle">Blogging app used to document creative explorations</p>
-				</div>
-			</div>
-			<div class="hero-right">
-				<img class="project-img" src="images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="project thumbnail">
+		<div id="menu-bar" class="menu-container">
+			<div class="burger-right">
+				<a class="nav-link" href="../index.html#about">about</a>
+				<a class="nav-link" href="../index.html#projects">projects</a>
+				<!-- <a class="nav-link" href="blog/blog.html">blog</a> -->
+				<a class="nav-link" href="../index.html#contacts">contacts</a>
 			</div>
 		</div>
-	
-		<!-- Project details View -->
-		<div class="project-details">
-			<div class="info-column tech-col">
-				<h3>Technologies</h3>
-				<p class="descr-text tech-text">Python <br>Django <br> Postgresql <br> HTML5 <br>CSS3 <br>JavaScript <br>Heroku</p>
-			</div>
-			<div class="info-column detail-col">
-				<h3>Details</h3>
-				<p class="descr-text">
-					Blogging application created using python and the django framework.<br>It uses python as a server-side language over the web implementing the model-view-control pattern of application design. Python is used to create, read, update and delete posts in the database. <br> This was a learning opportunity to deep-dive into building web applications using python and django, as well as managing postgresql databases.</p>
-			</div>
-			<div class="info-column link-col">
-				<h3>Link</h3>
-				<a class="text-link" target="_blank" href="https://luletblogapp.herokuapp.com">View App</a>
-			</div>
-		</div>
-	
-		<!-- Projects Image Samples and GIFs -->
-		<div class="project-previews">
-			<!-- Background vertical lines -->
-			<div class="vertical-lines">
-				<span class="line-span line1"></span>
-				<span class="line-span line2"></span>
-				<span class="line-span line3"></span>
-				<span class="line-span line4"></span>
-			</div>
-
-			<!-- Image slider -->
-			<div class="img-slider">
-				<div class="img-card">
-					<img src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="Project Menu Page">
-				</div>
-				<div class="img-card">
-					<img src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="Project Menu Page">
-				</div>
-				<div class="img-card">
-					<img src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="Project Menu Page">
-				</div>
-				<div class="img-card">
-					<img src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="Project Menu Page">
-				</div>
-			</div>
-
-			<!-- Project demo gif -->
-			<div class="p-demo-container">
-				<img class="demo-gif" src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="Project Demo gif">
-			</div>
-
-		</div>
-	
-		<!-- Project Links -->
-		<div class="project-links">
-			<div class="p-links-title">
-				<h3>Over and Under the Hood</h3>
-				<p>You can have a look at this project in detail with the links below, <br> if you like...or not!</p>
-			</div>
-			<div class="p-links-container">
-				<div class="single-project-link">
-					<p>Game</p>
-					<div class="link-img">
-						<a class="external-link" href="https://mastermind-gems.herokuapp.com" title="Play Game" target="_blank">
-							<img class="link-icon" src="../images/project_imgs/MasterMind/MM_Project_logo_3.png" alt="Game logo">
-						</a>
-					</div>
-				</div>
-				<div class="single-project-link">
-					<p>Code</p>
-					<div class="link-img">
-						<a class="external-link" href="https://github.com/lulets/master-mind-game" title="Source Code" target="_blank">
-							<img class="link-icon" src="../images/icons/GitHub_Logo.png" alt="GitHub logo">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</section>
+	</nav>
 
 
-	<!-- THIRD PROJECT -->
-	<section id="fringe-memory" class="page">
-		<!-- Project Landing View -->
-		<div class="home-section project-home">
-			<div class="hero-left">
-				<div class="project-heading">
-					<h2 class="project-title">Fringe Memory Game</h2>
-					<p class="project-subtitle">A mini-tribute to a beloved sci-fi tv show, Fringe(2008 - 2013).</p>
-				</div>
-			</div>
-			<div class="hero-right">
-				<img class="project-img" src="images/project_imgs/FringeMemory/FringeMemory_CoverImage.png" alt="project thumbnail">
-			</div>
-		</div>
-
-		<!-- Project details View -->
-		<div class="project-details">
-			<div class="info-column tech-col">
-				<h3>Technologies</h3>
-				<p class="descr-text tech-text">Python <br>Pygame </p>
-			</div>
-			<div class="info-column detail-col">
-				<h3>Details</h3>
-				<p class="descr-text">
-					Desktop memory game in python.<br> One of the things i loved about Fringe (other than fringe science) was the weird hidden glyphs and easter eggs scattered throughout the show. Subtle differences in each glyph gave a different meaning. <br>The aim of this project was to learn more about using pygame. Making a memory game with Fringe glyphs was a an easy default choice.</p>
-			</div>
-		</div>
-
-		<!-- Projects Image Samples and GIFs -->
-		<div class="project-previews">
-			<!-- Background vertical lines -->
-			<div class="vertical-lines">
-				<span class="line-span line1"></span>
-				<span class="line-span line2"></span>
-				<span class="line-span line3"></span>
-				<span class="line-span line4"></span>
-			</div>
-
-			<!-- Image slider -->
-			<div class="img-slider">
-				<div class="img-card">
-					<img src="../images/project_imgs/FringeMemory/FringeMemory_00_NewGameGrid.png" alt="Project Menu Page">
-				</div>
-				<div class="img-card">
-					<img src="../images/project_imgs/FringeMemory/FringeMemory_01_HalfPlayed.png">
-				</div>
-				<div class="img-card">
-					<img src="../images/project_imgs/FringeMemory/FringeMemory_02_FullWin.png">
-				</div>
-			</div>
-
-			<!-- Project demo gif -->
-			<div class="p-demo-container">
-				<img class="demo-gif" src="../images/project_imgs/FringeMemory/DemoGif_FringeMemory.gif" alt="Project Demo gif">
-			</div>
-
-		</div>
-
-		<!-- Project Links -->
-		<div class="project-links">
-			<div class="p-links-title">
-				<h3>Under the Hood</h3>
-				<p>You can have a look at this project in detail if you like...or not!</p>
-			</div>
-			<div class="p-links-container">
-				<div class="single-project-link">
-					<p>Code</p>
-					<div class="link-img">
-						<a class="external-link" href="https://github.com/lulets/Fringe_MemoryGame" title="Source Code" target="_blank">
-							<img class="link-icon" src="../images/icons/GitHub_Logo.png" alt="GitHub logo">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-	<!-- FIRST PROJECT - DEFAULT-->
-	<section id="mastermind-gems" class="page default-page">
+	<!-- FIRST PROJECT -->
+	<section id="mastermind-gems" class="page">
 		<!-- Project Landing View -->
 		<div class="home-section project-home">
 			<div class="hero-left">
@@ -275,7 +104,7 @@
 		<div class="project-links">
 			<div class="p-links-title">
 				<h3>Over and Under the Hood</h3>
-				<p>You can have a look at this project in detail with the links below, <br> if you like...or not!</p>
+				<p>You can have a look at this project in detail with the links below, if you like...or not!</p>
 			</div>
 			<div class="p-links-container">
 				<div class="single-project-link">
@@ -296,66 +125,469 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- OTHER PROJECTS NAVIGATION SLIDER -->
+		<nav class="nav-slider">
+			<!-- Background vertical lines -->
+			<div class="vertical-lines">
+				<span class="line-span line1"></span>
+				<span class="line-span line2"></span>
+				<span class="line-span line3"></span>
+				<span class="line-span line4"></span>
+			</div>
+	
+			<!-- All projects nav -->
+			<div class="bottom-nav">
+				<a class="nav-col" id="project-2" href="#blogging-app">
+					<!-- <div class="p-nav-col col-1"> -->
+						<p>Decode Space</p>
+					<!-- </div> -->
+				</a>
+	
+				<a class="nav-col" id="project-3" href="#fringe-memory">
+					<!-- <div class="p-nav-col col-2"> -->
+						<p>Fringe Memory</p>
+					<!-- </div> -->
+				</a>
+	
+				<a class="nav-col" id="project-4" href="javascript:void(0)">
+					<!-- <div class="p-nav-col col-3">
+						<div class="nav-img-box"> -->
+							<p>Imagery Viewer</p>
+						<!-- </div>
+					</div> -->
+				</a>
+	
+				<a class="nav-col" id="project-5" href="javascript:void(0)">
+					<!-- <div class="p-nav-col col-4">
+						<div class="nav-img-box"> -->
+							<p>My Plannerly</p>
+						<!-- </div>
+					</div> -->
+				</a>
+			</div>
+		</nav>
 				
 	</section>
 
 
-	<!-- MAIN PROJECTS NAVIGATION SLIDER -->
-	<nav class="nav-slider">
-		<!-- Background vertical lines -->
-		<div class="vertical-lines">
-			<span class="line-span line1"></span>
-			<span class="line-span line2"></span>
-			<span class="line-span line3"></span>
-			<span class="line-span line4"></span>
+	<!-- SECOND PROJECT -->
+	<section id="blogging-app" class="page">
+		<!-- Project Landing View -->
+		<div class="home-section project-home">
+			<div class="hero-left">
+				<div class="project-heading">
+					<h2 class="project-title">DecodeSpace</h2>
+					<p class="project-subtitle">Blogging app used to document creative explorations</p>
+				</div>
+			</div>
+			<div class="hero-right">
+				<img class="project-img" src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="project thumbnail">
+			</div>
+		</div>
+	
+		<!-- Project details View -->
+		<div class="project-details">
+			<div class="info-column tech-col">
+				<h3>Technologies</h3>
+				<p class="descr-text tech-text">Python <br>Django <br> Postgresql <br> HTML5 <br>CSS3 <br>JavaScript <br>Heroku</p>
+			</div>
+			<div class="info-column detail-col">
+				<h3>Details</h3>
+				<p class="descr-text">
+					Blogging application built on python and the django framework in the backend.<br>It implements the model-view-control pattern using django's base setup in its application design. Python is used to create, read, update and delete posts in the database. <br> This was a learning opportunity to deep-dive into building web applications using python and django, as well as working with postgresql databases.</p>
+			</div>
+			<div class="info-column link-col">
+				<h3>Link</h3>
+				<a class="text-link" target="_blank" href="https://luletblogapp.herokuapp.com">View App</a>
+			</div>
+		</div>
+	
+		<!-- Projects Image Samples and GIFs -->
+		<div class="project-previews">
+			<!-- Background vertical lines -->
+			<div class="vertical-lines">
+				<span class="line-span line1"></span>
+				<span class="line-span line2"></span>
+				<span class="line-span line3"></span>
+				<span class="line-span line4"></span>
+			</div>
+
+			<!-- Image slider -->
+			<div class="img-slider">
+				<div class="img-card">
+					<img src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="Project Menu Page">
+				</div>
+				<div class="img-card">
+					<img src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="Project Menu Page">
+				</div>
+				<div class="img-card">
+					<img src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="Project Menu Page">
+				</div>
+				<div class="img-card">
+					<img src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="Project Menu Page">
+				</div>
+			</div>
+
+			<!-- Project demo gif -->
+			<div class="p-demo-container">
+				<img class="demo-gif" src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="Project Demo gif">
+			</div>
+
+		</div>
+	
+		<!-- Project Links -->
+		<div class="project-links">
+			<div class="p-links-title">
+				<h3>Over and Under the Hood</h3>
+				<p>You can check out this project in detail with the links below, if you like....or not!</p>
+			</div>
+			<div class="p-links-container">
+				<div class="single-project-link">
+					<p>App</p>
+					<div class="link-img">
+						<a class="external-link" href="https://luletblogapp.herokuapp.com" title="decodespace" target="_blank">
+							<img class="link-icon" src="../images/project_imgs/MasterMind/MM_Project_logo_3.png" alt="Game logo">
+						</a>
+					</div>
+				</div>
+				<div class="single-project-link">
+					<p>Code</p>
+					<div class="link-img">
+						<a class="external-link" href="https://github.com/lulets/master-mind-game" title="Source Code" target="_blank">
+							<img class="link-icon" src="../images/icons/GitHub_Logo.png" alt="GitHub logo">
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<!-- All projects nav -->
-		<div class="bottom-nav">
-			<a class="nav-col" id="project-1" href="#mastermind-gems">
-				<!-- <div class="p-nav-col col-1"> -->
-					<p>MasterMind Gems</p>
-				<!-- </div> -->
-			</a>
+		<!-- OTHER PROJECTS NAVIGATION SLIDER -->
+		<nav class="nav-slider">
+			<!-- Background vertical lines -->
+			<div class="vertical-lines">
+				<span class="line-span line1"></span>
+				<span class="line-span line2"></span>
+				<span class="line-span line3"></span>
+				<span class="line-span line4"></span>
+			</div>
+	
+			<!-- All projects nav -->
+			<div class="bottom-nav">
+				<a class="nav-col" id="project-1" href="#mastermind-gems">
+					<!-- <div class="p-nav-col col-1"> -->
+						<p>MasterMind 2.0</p>
+					<!-- </div> -->
+				</a>
+	
+				<a class="nav-col" id="project-3" href="#fringe-memory">
+					<!-- <div class="p-nav-col col-2"> -->
+						<p>Fringe Memory</p>
+					<!-- </div> -->
+				</a>
+	
+				<a class="nav-col" id="project-4" href="javascript:void(0)">
+					<!-- <div class="p-nav-col col-3">
+						<div class="nav-img-box"> -->
+							<p>Imagery Viewer</p>
+						<!-- </div>
+					</div> -->
+				</a>
+	
+				<a class="nav-col" id="project-5" href="javascript:void(0)">
+					<!-- <div class="p-nav-col col-4">
+						<div class="nav-img-box"> -->
+							<p>My Plannerly</p>
+						<!-- </div>
+					</div> -->
+				</a>
+			</div>
+		</nav>
 
-			<a class="nav-col" id="project-2" href="#blogging-app">
-				<!-- <div class="p-nav-col col-2"> -->
-					<p>Blogging App</p>
-				<!-- </div> -->
-			</a>
+	</section>
 
-			<a class="nav-col" id="project-3" href="#fringe-memory">
-				<!-- <div class="p-nav-col col-3">
-					<div class="nav-img-box"> -->
-						<p>Fringe Memory Game</p>
-					<!-- </div>
-				</div> -->
-			</a>
 
-			<a class="nav-col" id="project-4" href="javascript:void(0)">
-				<!-- <div class="p-nav-col col-4">
-					<div class="nav-img-box"> -->
-						<p>Place Holder</p>
-					<!-- </div>
-				</div> -->
-			</a>
+	<!-- THIRD PROJECT -->
+	<section id="fringe-memory" class="page">
+		<!-- Project Landing View -->
+		<div class="home-section project-home">
+			<div class="hero-left">
+				<div class="project-heading">
+					<h2 class="project-title">Fringe Memory Game</h2>
+					<p class="project-subtitle">A mini-tribute to a beloved sci-fi tv show, Fringe(2008 - 2013).</p>
+				</div>
+			</div>
+			<div class="hero-right">
+				<img class="project-img" src="../images/project_imgs/FringeMemory/FringeMemory_CoverImage.png" alt="project thumbnail">
+			</div>
 		</div>
 
-	</nav>
+		<!-- Project details View -->
+		<div class="project-details">
+			<div class="info-column tech-col">
+				<h3>Technologies</h3>
+				<p class="descr-text tech-text">Python <br>Pygame </p>
+			</div>
+			<div class="info-column detail-col">
+				<h3>Details</h3>
+				<p class="descr-text">
+					This is a desktop memory game in python.<br>One of the things I loved about Fringe (other than fringe science) was the weird hidden glyphs and easter eggs scattered throughout the show. Subtle differences in each glyph gave a different meaning. <br>The aim of this project was to learn more about using pygame. Making a memory game using glyphs from a favourite show was an easy choice.</p>
+			</div>
+			<!-- <div class="info-column link-col">
+				<h3></h3>
+				<a></a>
+			</div> -->
+
+		</div>
+
+		<!-- Projects Image Samples and GIFs -->
+		<div class="project-previews">
+			<!-- Background vertical lines -->
+			<div class="vertical-lines">
+				<span class="line-span line1"></span>
+				<span class="line-span line2"></span>
+				<span class="line-span line3"></span>
+				<span class="line-span line4"></span>
+			</div>
+
+			<!-- Image slider -->
+			<div class="img-slider">
+				<div class="img-card">
+					<img src="../images/project_imgs/FringeMemory/FringeMemory_00_NewGameGrid.png" alt="Project Menu Page">
+				</div>
+				<div class="img-card">
+					<img src="../images/project_imgs/FringeMemory/FringeMemory_01_HalfPlayed.png">
+				</div>
+				<div class="img-card">
+					<img src="../images/project_imgs/FringeMemory/FringeMemory_02_FullWin.png">
+				</div>
+			</div>
+
+			<!-- Project demo gif -->
+			<div class="p-demo-container">
+				<img class="demo-gif" src="../images/project_imgs/FringeMemory/DemoGif_FringeMemory.gif" alt="Project Demo gif">
+			</div>
+
+		</div>
+
+		<!-- Project Links -->
+		<div class="project-links">
+			<div class="p-links-title">
+				<h3>Under the Hood</h3>
+				<p>You can have a look at this project in detail if you like...or not!</p>
+			</div>
+			<div class="p-links-container">
+				<div class="single-project-link">
+					<p>Code</p>
+					<div class="link-img">
+						<a class="external-link" href="https://github.com/lulets/Fringe_MemoryGame" title="Source Code" target="_blank">
+							<img class="link-icon" src="../images/icons/GitHub_Logo.png" alt="GitHub logo">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- OTHER PROJECTS NAVIGATION SLIDER -->
+		<nav class="nav-slider">
+			<!-- Background vertical lines -->
+			<div class="vertical-lines">
+				<span class="line-span line1"></span>
+				<span class="line-span line2"></span>
+				<span class="line-span line3"></span>
+				<span class="line-span line4"></span>
+			</div>
+	
+			<!-- All projects nav -->
+			<div class="bottom-nav">
+				<a class="nav-col" id="project-1" href="#mastermind-gems">
+					<!-- <div class="p-nav-col col-1"> -->
+						<p>MasterMind 2.0</p>
+					<!-- </div> -->
+				</a>
+	
+				<a class="nav-col" id="project-2" href="#blogging-app">
+					<!-- <div class="p-nav-col col-2"> -->
+						<p>Decode Space</p>
+					<!-- </div> -->
+				</a>
+	
+				<a class="nav-col" id="project-4" href="javascript:void(0)">
+					<!-- <div class="p-nav-col col-3">
+						<div class="nav-img-box"> -->
+							<p>Imagery Viewer</p>
+						<!-- </div>
+					</div> -->
+				</a>
+	
+				<a class="nav-col" id="project-5" href="javascript:void(0)">
+					<!-- <div class="p-nav-col col-4">
+						<div class="nav-img-box"> -->
+							<p>My Plannerly</p>
+						<!-- </div>
+					</div> -->
+				</a>
+			</div>
+		</nav>
+
+	</section>
+
+
+
+	<!-- ALL PROJECTS OVERVIEW - DEFAULT SECTION -->
+	<section id="projects" class="projects-view page default-page">
+		<div class="projectsDisplay">
+			<div class="headingView pageTitle">
+				<h2>Projects</h2>
+				<p class="subtitle">Some things I've made</p>
+			</div>
+			<!-- <div class="background-text">
+				<div class="line-graphic"></div>
+				<p>some <br>content</p>
+			</div> -->
+			<div class="projectsContainer">
+				<!-- PROJECT 1 -->
+				<div class="cardTile projectCard">
+					<div class="cardImg thumbnailView">
+						<img class="projectImg" src="../images/project_imgs/MasterMind/MM_CoverImage.png" alt="image from the project">
+					</div>
+					<div class="cardDetails detailView">
+						<div class="cardHeading">
+							<h3 class="projectTitle">Mastermind</h3>
+							<p class="projectType">Game</p>
+						</div>
+						<div class="cardSummary">
+							<div class="descrBox">
+								<p class="detailText">Web based recreation of the classic board game Mastermind. Features the 4, 5 and 6 board configurations.</p>
+							</div>
+						</div>
+						<div class="projectTech">
+							<span>HTML5</span>
+							<span>CSS3</span>
+							<span>JavaScript</span>
+						</div>
+						<a class="projectLink" href="#mastermind-gems">More</a>  
+					</div>
+				</div>
+	
+				<!-- PROJECT 2 -->
+				<div class="cardTile projectCard">
+					<div class="cardImg thumbnailView">
+						<img class="projectImg" src="../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg" alt="project thumbnail">
+					</div>
+					<div class="cardDetails detailView">
+						<div class="cardHeading">
+							<h3 class="projectTitle">Decode Space</h3>
+							<p class="projectType">Blogging app</p>
+						</div>
+						<div class="cardSummary">
+							<div class="descrBox">
+								<p class="detailText">Online blogging application with code highlighting and multiple user capabilities used to write dev tutorials.</p>
+							</div>
+						</div>
+						<div class="projectTech">
+							<span>Python</span>
+							<span>Django</span>
+							<span>postgresql</span>
+							<span>HTML5</span>
+							<span>CSS3</span>
+							<span>JavaScript</span>
+						</div>
+						<a class="projectLink" href="#blogging-app">More</a>  
+					</div>
+				</div>
+	
+				<!-- PROJECT 3 -->
+				<div class="cardTile projectCard">
+					<div class="cardImg thumbnailView">
+						<img class="projectImg" src="../images/project_imgs/FringeMemory/FringeMemory_CoverImage.png" alt="project thumbnail">
+					</div>
+					<div class="cardDetails detailView">
+						<div class="cardHeading">
+							<h3 class="projectTitle">Fringe Memory</h3>
+							<p class="projectType">Game</p>
+						</div>
+						<div class="cardSummary">
+							<div class="descrBox">
+								<p class="detailText">Desktop memory game based on a favourite sci-fi TV show, Fringe. This was one of the very first games I made.</p>
+							</div>
+						</div>
+						<div class="projectTech">
+							<span>Python</span>
+							<span>Pygame</span>
+						</div>
+						<a class="projectLink" href="#fringe-memory">More</a>  
+					</div>
+				</div>
+	
+				<!-- PROJECT 4 -->
+				<div class="cardTile projectCard">
+					<div class="cardImg thumbnailView">
+						<img class="projectImg" src="../images/graphics/nature-sunset-simple-minimal.png" alt="project thumbnail">
+					</div>
+					<div class="cardDetails detailView">
+						<div class="cardHeading">
+							<h3 class="projectTitle">MyPlannerly</h3>
+							<p class="projectType">Scheduling app</p>
+						</div>
+						<div class="cardSummary">
+							<div class="descrBox">
+								<p class="detailText">Allows one to synchronize various repetitive routines and allocate enough time for them. <br>Ongoing project.</p>
+							</div>
+						</div>
+						<div class="projectTech">
+							<span>HTML5</span>
+							<span>CSS3</span>
+							<span>JavaScript</span>
+							<span>React</span>
+						</div>
+						<p class="projectLink" href="#routine-planner">More</p>  
+					</div>
+				</div>
+
+				<div class="cardTile moreProjects">
+					<div class="moreHeading">
+						<div class="title">
+							<p>more <br>projects</p>
+						</div>
+					</div>
+					<div class="cardDetails moreContent">
+						<div class="moreTextBox">
+							<p class="detailText">To explore some more unfiltered works, head over to Codepen or GitHub. <br><br>Spoiler Alert: some are pretty brutal.</p>
+						</div>
+						<div class="moreLinks">
+							<a href="https://codepen.io/loetcodes" title="codepen"><img class="textIcon" src="../images/icons/codepen-wordmark-white.png" alt="Codepen link"></a>
+							<a href="https://github.com/loetcodes" title="github"><img class="textIcon" src="../images/icons/GitHub_Logo_White_v3.png" alt="Github link"></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- <div class="social-links">
+				<a class="social-link" href="mailto:luletco@gmail.com" title="mail"><img class="social-icon" src="images/icons/mail-light-wheat-40px.png" alt="email link">
+				</a>
+				<a class="social-link" href="https://twitter.com/loetcodes" title="twitter"><img class="social-icon" src="images/icons/twitter-light-wheat-40px.png" alt="Twitter link">
+				</a>
+				<a class="social-link" href="https://github.com/loetcodes" title="github"><img class="social-icon" src="images/icons/github-light-wheat-40px.png" alt="Github link">
+				</a>
+				<a class="social-link" href="https://codepen.io/loetcodes" title="codepen"><img class="social-icon" src="images/icons/codepen-light-wheat-filled-40px.png" alt="Codepen link">
+				</a>
+			</div> -->
+
+		</div>
+	</section>
 
 	
-	<!-- FOOTER WITH TEXT LINKS -->
+	<!-- FOOTER WITH LINKS -->
 	<footer id="footer-profile" class="page-footer">
-		<!-- <span>Loet &#169; 2019</span> -->
-		<span class="copyright-info">&#169; Loet 2019</span>
 		<!-- SOCIAL ICONS  -->
 		<div class="contact-links">
+			<a class="social-link" href="mailto:luletco@gmail.com" title="mail">
+				<img class="social-icon" src="../images/icons/mail-light-wheat-40px.png" alt="email link">
+			</a>
 			<a class="social-link" href="https://twitter.com/loetcodes" title="twitter">
 				<img class="social-icon" src="../images/icons/twitter-light-wheat-40px.png" alt="Twitter link">
 			</a>
-			<!-- <a class="social-link" href="mailto:luletco@gmail.com" title="mail">
-				<img class="social-icon" src="images/social_icons/mail-light-wheat-40px.png" alt="email link">
-			</a> -->
 			<a class="social-link" href="https://github.com/loetcodes" title="github">
 				<img class="social-icon" src="../images/icons/github-light-wheat-40px.png" alt="Github link">
 			</a>
@@ -363,6 +595,7 @@
 				<img class="social-icon" src="../images/icons/codepen-light-wheat-filled-40px.png" alt="Codepen link">
 			</a>
 		</div>
+		<span class="copyright-info">&#169; Loet 2019</span>
 	</footer>
 
 </body>

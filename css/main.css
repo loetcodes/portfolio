@@ -1,5 +1,7 @@
 /* MAIN STYLE SHEET FOR PORTFOLIO SITE */
 
+
+
 * {
     font-family: Gotham XNarrow A,Gotham XNarrow B,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -7,20 +9,45 @@
     --text_col0: #242424;
     --text_col1: #f5deb3;
     --text_col2: #E9EAEC;
-    --background-col0: #000;
-    --background-col1: #FBF8F8;
-    --background-col2: #E3E4E4;
-    --background-col3: #FFFAF3;
+    --color0: #000;
+    --color1: #303030;
+    --background_col1: #FBF8F8;
+    --background_col2: #dadada;
+    --background_col3: #FFFAF3;
+    --background_col4: #d0d0d02b;
     --theme_col0: #000457;
-    --theme_col_v2: #101010;
     --theme_col1: #391F84;
     --theme_col2: #18064A;
     --theme_col3: #404040;
-    --theme_col4: #191919;
+    --theme_col4: #242424;
     --theme_col5: #a17f00;
     --theme_col6: #806503;
+    --theme_col7: #151515;
     --border_col: #dcdcdc;
-    --gradient_start:var(--background-col1);
+    --gradient_start:var(--background_col1);
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+/*Track*/
+::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: var(--color1, #000);
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--color1);
+    box-shadow: inset 0 0 4px 1px #000000;
+}
+
+/*Handle*/
+::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+    border: 0.5px solid black;
 }
 
 .page {
@@ -56,7 +83,7 @@ body {
     width: 100%;
     margin: 0;
     color: #242424;
-    background-color: var(--background-col2);
+    background-color: var(--background_col2);
 }
 
 .main-summary {
@@ -73,7 +100,7 @@ body {
 }
 
 .intro-greeting {
-    background-color: var(--background-col0);
+    background-color: var(--color0);
     background-image: url("../images/graphics/astronaut_3.png");
     background-image: url("../images/graphics/loetCartoon_dottedCol.jpg");
     background-size: 100%;
@@ -290,7 +317,7 @@ body {
     flex-wrap: wrap;
     grid-column: 1 / 5;
     grid-row: 2;
-    background-color: var(--background-col3);
+    background-color: var(--background_col3);
     justify-content: center;
 }
 
@@ -395,7 +422,7 @@ body {
     max-width: 800px;
     max-height: 820px;
     align-self: center;
-    background-color: #d6d6d6;
+    background-color: var(--background_col1);
     padding: 5%;
     margin-bottom: 15%;
     text-align: right;
@@ -497,7 +524,7 @@ body {
 
 @media only screen and (min-width: 620px) {
     a {
-        font-size: 1.2em;
+        font-size: 1.0em;
     }
     .detailText {
         font-size: 1.1em;
@@ -574,7 +601,6 @@ body {
     }
 }
 
-
 /* Extending to laptop screens */
 @media only screen and (min-width: 1024px) {
     /*Just above the 1024 boundary*/
@@ -636,7 +662,6 @@ body {
     }
 
     .social-link {
-        margin-bottom: 4%;
         align-self: flex-end;
     }
 
@@ -658,7 +683,6 @@ body {
 
     .projectsDisplay{
         display: grid;
-        grid-template: 8% 4% 2% auto / 10% 30% 10% 20% 20% 10%;
         grid-template: 40vh 20vh 5vh 15vh 20vh auto / 10% 30% 10% 20% 20% 10%;
     }
     
@@ -825,27 +849,9 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Extending to larger desktop screens */
 @media only screen and (min-width: 4444px) {
 
 }
+
+/* font-family: "PTSerif",Georgia,serif; */

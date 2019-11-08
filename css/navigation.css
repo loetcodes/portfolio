@@ -35,7 +35,8 @@ This was separated because at the time I was experimenting with different naviga
 .menu-container {
     width: 50%;
     display: flex;
-    justify-content: flex-end;    
+    justify-content: flex-end;
+    padding-left: 0.2%; 
 }
 
 .burger-right {
