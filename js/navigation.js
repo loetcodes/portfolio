@@ -1,24 +1,14 @@
 // Navigation Menu Script
 
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-// var currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-55px";
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
-
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
+  var currentScrollPos = window.pageYOffset;
+  var navbar = document.getElementById("navbar");
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
+    navbar.classList.remove("scrollDown");
   } else {
-    document.getElementById("navbar").style.top = "-55px";
+    navbar.classList.add("scrollDown");
   }
   prevScrollpos = currentScrollPos;
 }

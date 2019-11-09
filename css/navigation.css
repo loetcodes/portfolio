@@ -56,5 +56,10 @@
     font-weight: 700;
 }
 
+.scrollDown {
+    top: -55px;
+    transition: all 1s cubic-bezier(0.39, 0.575, 0.565, 1);   
+}
+
 @media only screen and (min-width: 768px) {
 }
