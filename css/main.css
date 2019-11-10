@@ -11,14 +11,14 @@
     --color0: #000;
     --color2: #dfdfdf;
     --background_col1: #fbfbf8;
-    --background_col2: #f2f2f2;
+    --background_col2: #dfdfdf;
     --background_col3: #fffaf3;
     --theme_col1: #391F84;
-    --theme_col2: #18064A;
+    --theme_col2: #010059;
     --theme_col4: #242424;
     --theme_col5: #a17f00;
     --theme_col7: #151515;
-    --border_col: #dcdcdc;
+    --border_col: #bdbdbd;
     --gradient_start: var(--background_col1);
 }
 
@@ -90,15 +90,14 @@ body {
 
 .about-view .main-summary {
     /*height: 100vh;*/
-    border-bottom: 2px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
     border-bottom-color: var(--border_col);
 }
 
 .intro-greeting {
     background-color: var(--color0);
-    background-image: url("../images/graphics/astronaut_3.png");
     background-image: url("../images/graphics/loetCartoon_dottedCol.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     grid-row: 1;
