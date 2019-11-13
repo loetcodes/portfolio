@@ -33,13 +33,12 @@
     --img_filter: none;
 }
 
-[data-theme="dark"] {}
-
-:root{
+[data-theme="dark"] {
     --background_col1: #191919;
     --background_col2: #272727;
     --background_col3: #191919;
 
+    --text_col0: #e1e1e1;
     --text_col0: #bdbdbd;
     --text_col3: #636361;
     --text_col4: #2fc1fa;
@@ -60,14 +59,39 @@
 
 }
 
+/* :root{
+    --background_col1: #191919;
+    --background_col2: #272727;
+    --background_col3: #191919;
 
-/*Scrollbar*/
+    --text_col0: #e1e1e1;
+    --text_col0: #bdbdbd;
+    --text_col3: #636361;
+    --text_col4: #2fc1fa;
+
+    --color2: #f5deb3;
+
+    --theme_col2: #141414;
+    --theme_col4: #191919;
+    --theme_col5: #2fc1fa;
+    
+    --theme_col8: #7910ff;
+    --theme_col8: #636361;
+
+    --border_col: #191919;
+    --tile_shadow: #080808;
+
+    --img_filter: invert(1);
+
+} */
+
+
+/* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 12px;
     height: 15px;
 }
 
-/*Track*/
 ::-webkit-scrollbar-track {
     border-radius: 0px;
     background-color: var(--color1, #000);
@@ -77,7 +101,6 @@
     box-shadow: inset 0 0 4px 1px #000000;
 }
 
-/*Handle*/
 ::-webkit-scrollbar-thumb {
     background: #000;
     border-radius: 10px;
@@ -626,8 +649,57 @@ body {
     top: -55px;
 }
 
+.mode-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
 
-/* PROJECTS PAGE ONLY */
+.mode-switch {
+    display: inline-block;
+    height: 60%;
+    position: relative;
+    width: 60px;
+}
+
+.mode-switch input {
+    display: none;
+}
+
+.toggle {
+    background-color: var(--background_col1);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 7%;
+    top: 0;
+    transition: 0.5s;
+}
+
+.toggle:before {
+    background-color: var(--theme_col5);
+    background-color: var(--background_col2);
+    position: absolute;
+    content: "";
+    height: 80%;
+    width: 40%;
+    left: 6%;
+    bottom: 10%;
+    transition: 0.5s;
+}
+
+input:checked + .toggle:before {
+    transform: translateX(26px);
+}
+
+.toggle.round {
+    border-radius: 34px;
+}
+
+.toggle.round:before {
+    border-radius: 50%;
+}
+
+/* PROJECTS PAGE */
 .bottom-nav #project-1 {
     background-image: url("../images/project_imgs/MasterMind/MM_CoverImage.png");
 }
