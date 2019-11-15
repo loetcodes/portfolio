@@ -29,6 +29,7 @@
     --border_col: #bdbdbd;
     --border_shadow1: #000;
     --border_shadow2: #afafaf;
+    --border_shadow3: #ababab;
 
 
     --tile_shadow: #5c5c5c;
@@ -58,7 +59,7 @@
     --theme_col8: #636361;
 
     --border_col: #191919;
-    --border_shadow2: #000;
+    --border_shadow2: #060606;
     --tile_shadow: #080808;
 
     --img_filter: invert(1);
@@ -137,6 +138,7 @@ body {
 .about-view .main-summary {
     border-bottom: 1px solid #dcdcdc;
     border-bottom-color: var(--border_col);
+    box-shadow: 0px 0px 6px 1px var(--border_shadow2);
 }
 
 .intro-greeting {
@@ -375,7 +377,7 @@ body {
 
 .about-core > * {
     flex: 1 1 40%;
-    font-size: 3.5vmin;
+    font-size: 3.6vmin;
     letter-spacing: 2px;
     margin: 2% 4% 2% 4%;
     justify-content: space-around;
@@ -418,12 +420,12 @@ body {
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 10%;
+    padding-left: 5%;
 }
 
 .skills-list > * {
     flex: 1 1 50%;
-    font-size: 3.4vmin;
+    font-size: 3.6vmin;
     letter-spacing: 2px;
 }
 
@@ -623,6 +625,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-right: 10px;
+    margin-left: 5%;
 }
 
 .nav-link {
@@ -666,10 +669,10 @@ body {
     right: 8%;
     top: 0;
     transition: 0.5s;
+    box-shadow: inset 0px 0px 3px 2px var(--border_shadow2);
 }
 
 .toggle:before {
-    background-color: var(--theme_col5);
     background-color: var(--background_col2);
     position: absolute;
     content: "";
@@ -678,6 +681,7 @@ body {
     left: 6%;
     bottom: 11%;
     transition: 0.5s;
+    box-shadow: inset 0px 0px 3px 2px var(--border_shadow2);
 }
 
 input:checked + .toggle:before {
