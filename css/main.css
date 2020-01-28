@@ -266,13 +266,12 @@ body {
 }
 
 .main-summary .social {
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 
 .summary {
     height: 100vmax;
     display: grid;
-    grid-template: 35% 35% 30% / 20% 20% 10% 10% 40%;
     grid-template: 27% auto / 40% 60%;
 }
 
