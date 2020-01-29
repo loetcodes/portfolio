@@ -42,9 +42,7 @@
     --background_col2: #272727;
     --background_col3: #191919;
 
-    --text_col0: #e1e1e1;
     --text_col0: #bdbdbd;
-    --text_col3: #636361;
     --text_col3: #2fc1fa;
     --text_col4: #2fc1fa;
 
@@ -54,7 +52,6 @@
     --theme_col4: #191919;
     --theme_col5: #2fc1fa;
     
-    --theme_col8: #7910ff;
     --theme_col8: #636361;
 
     --border_col: #191919;
@@ -1543,7 +1540,7 @@ a {
     }
     
     .textIcon {
-        height: 4vh;
+        height: 3.5vh;
         margin: 4%;
         max-width: 220px;
         max-height: fit-content;
