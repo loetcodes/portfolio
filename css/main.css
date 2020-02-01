@@ -701,7 +701,7 @@ input:checked + .toggle:before {
 }
 
 .bottom-nav #project-2 {
-    background-image: url("../images/project_imgs/BlogApp/BlogApp_CoverImage.jpg");
+    background-image: url("../images/project_imgs/MapImagerySlider/MapSlider_00_Cover.png");
 }
 
 .bottom-nav #project-3 {
@@ -721,7 +721,7 @@ a {
 }
 
 #map-slider .project-details{
-    background-color: #480102;
+    background-color: #474747;
 }
 
 #blogging-app .project-details {
