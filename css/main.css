@@ -38,8 +38,8 @@
 }
 
 [data-theme="dark"] {
-    --background_col1: #191919;
-    --background_col2: #272727;
+    --background_col1: #353535;
+    --background_col2: #292929;
     --background_col3: #191919;
 
     --text_col0: #bdbdbd;
@@ -472,8 +472,8 @@ body {
     display: flex;
     width: 90%;
     height: 48vmax;
-    max-width: 800px;
-    max-height: 820px;
+    max-width: 600px;
+    max-height: 700px;
     align-self: center;
     background-color: var(--background_col1);
     padding: 5%;
@@ -647,6 +647,7 @@ body {
 .mode-switch-wrapper {
     display: flex;
     align-items: center;
+    margin-right: 2%;
 }
 
 .mode-switch {
@@ -662,6 +663,9 @@ body {
 
 .toggle {
     background-color: var(--background_col1);
+    background-image: url("../images/icons/sun_and_moon_back.png");
+    background-size: 90%;
+    background-position: center;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -675,16 +679,16 @@ body {
     background-color: var(--background_col2);
     position: absolute;
     content: "";
-    height: 80%;
-    width: 35%;
-    left: 6%;
+    height: 78%;
+    width: 36%;
+    left: 11%;
     bottom: 11%;
     transition: 0.5s;
     box-shadow: inset 0px 0px 3px 2px var(--border_shadow2);
 }
 
 input:checked + .toggle:before {
-    transform: translateX(26px);
+    transform: translateX(120%);
 }
 
 .toggle.round {
@@ -1123,7 +1127,9 @@ a {
     .social-icon {
         width: 30px;
     }
-
+    .mode-switch-wrapper {
+        margin-right: 2%;
+    }
 }
 
 /* Extending to tablet screens */
@@ -1274,7 +1280,9 @@ a {
         left: 8%;
     }
 
-    /* mode switch */
+    input:checked + .toggle:before {
+        transform: translateX(110%);
+    }
 }
 
 /* Extending to laptop screens */
@@ -1477,7 +1485,7 @@ a {
     }
 
     .title {
-        font-size: 4em;
+        font-size: 3.2em;
     }
 
     .back-detail {
@@ -1507,7 +1515,7 @@ a {
     
     .cardTile {
         height: 50vh;
-        max-height: 840px;
+        max-height: 750px;
     }
 
     .cardSummary {
@@ -1529,9 +1537,9 @@ a {
     }
     
     .textIcon {
-        height: 3.5vh;
+        height: 3.2vh;
         margin: 4%;
-        max-width: 220px;
+        max-width: 200px;
         max-height: fit-content;
     } 
     
