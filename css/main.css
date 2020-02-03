@@ -203,6 +203,7 @@ body {
     justify-content: center;
     align-self: center;
     width: 85%;
+    max-width: 700px;
 }
 
 .intro-summary .descrBox {
@@ -214,6 +215,38 @@ body {
     width: 85%;
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+.main-about .intro-summary {
+    display: grid;
+    grid-template: 85% 15% / 100%;
+}
+
+.main-about .intro-summary .descrBox {
+    grid-row: 1;
+    justify-self: center;
+}
+
+.scroll-tip {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: start;
+    justify-self: end;
+}
+
+.scroll-tip::after{
+    content: "\1f853";
+    color: var(--text_col0);
+    font-size: 8vmin;
+}
+
+.tip-text {
+    font-size: 4vmin;
+    transform: rotate(90deg);
+    display: block;
+    margin-bottom: 2px;
 }
 
 .intro-contact {
@@ -688,7 +721,7 @@ body {
 }
 
 input:checked + .toggle:before {
-    transform: translateX(120%);
+    transform: translateX(123%);
 }
 
 .toggle.round {
@@ -1064,7 +1097,18 @@ a {
     .nav-link {
         font-size: 1em;
     }
+
     .detailText {
+        font-size: 1.1em;
+    }
+
+    .scroll-tip::after{
+        content: "\1f853";
+        color: var(--text_col0);
+        font-size: 2em;
+    }
+
+    .tip-text {
         font-size: 1.1em;
     }
 
