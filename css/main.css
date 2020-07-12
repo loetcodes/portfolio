@@ -59,7 +59,6 @@
     --tile_shadow: #080808;
 
     --img_filter: invert(1);
-
 }
 
 /* SCROLLBAR */
@@ -189,6 +188,7 @@ body {
     grid-row: 2 / 4;
     grid-column: 1 / 3;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -232,8 +232,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-self: start;
-    justify-self: end;
+    align-self: flex-end;
+    position: relative;
+    top: 25%;
 }
 
 .scroll-tip::after{
@@ -296,24 +297,18 @@ body {
 }
 
 .summary {
-    height: 100vmax;
     display: grid;
-    grid-template: 27% auto / 40% 60%;
-}
-
-.main-core {
-    height: 125vmax;
-    grid-template: 27vmax auto / 40% 60%;
+    grid-gap: 5% 0%;
 }
 
 .section-heading {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     grid-column: 1 / 3;
     align-items: center;
 }
 
-.projectsDisplay{
+.projectsDisplay, .aboutDisplay{
     display: grid;
     grid-template: 32vmax auto/ 5% 90% 5%
 }
@@ -324,8 +319,22 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    justify-content:space-around;
+    justify-content: space-around;
     padding-top: 15%;
+}
+
+.aboutContainer {
+    grid-row-start: 2;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    justify-self: center;
+}
+
+.aboutContainer > * {
+    margin: 15% 5%;
 }
 
 .headingView {
@@ -395,7 +404,7 @@ body {
     grid-row: 2;
     background-color: var(--background_col3);
     justify-content: center;
-    box-shadow: 0px 0px 6px 1px var(--border_shadow2);
+    box-shadow: 2px 2px 8px 0px var(--border_shadow2);
 }
 
 .about-core {
@@ -411,27 +420,21 @@ body {
 }
 
 .about-skills {
-    display: grid;
-    grid-template: 40% 35% 25% / 100%;
-    background-color: var(--theme_col4);
-    color: var(--text_col2);
+    display: flex;
+    background: none;
+    box-shadow: none;
 }
 
 .skill-row {
+    width: -webkit-fill-available;
     display: grid;
     grid-template: 100% / 35% 60%;
-    grid-gap: 5%;
+    grid-gap: 5% 0;
     align-items: center;
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
-.about-skills .skill-row:nth-child(odd) {
-    background-color: var(--theme_col2);
-}
-
-.about-skills .skill-row:nth-child(2) {
-    background-color: var(--theme_col4);
+    padding: 5% 0%;
+    margin: 4% 0%;
+    background-color: var(--background_col3);
+    box-shadow: 2px 2px 8px 0px var(--border_shadow2);
 }
 
 .skill-group {
@@ -441,7 +444,9 @@ body {
     letter-spacing: 4px;
     text-transform: uppercase;
     transform: rotate(-90deg);
-    color : var(--theme_col8);
+    color : var(--theme_col5);
+    font-weight: 600;
+    padding-left: 5%;
 }
 
 .skills-list {
@@ -503,7 +508,7 @@ body {
     max-width: 600px;
     max-height: 700px;
     align-self: center;
-    background-color: var(--background_col1);
+    background-color: var(--background_col3);
     padding: 5%;
     margin-bottom: 15%;
     text-align: right;
@@ -571,7 +576,7 @@ body {
     justify-content: center;
     padding: 6% 0%;
     align-self: flex-end;
-    background-color: var(--theme_col4);
+    background-color: #292929;
     color: var(--text_col2);
 }
 
@@ -1182,7 +1187,7 @@ a {
         height: 100vh;
     }
 
-    .projectsDisplay{
+    .projectsDisplay, .aboutDisplay{
         display: grid;
         grid-template: 32vh auto/ 5% 90% 5%
     }
@@ -1364,6 +1369,7 @@ a {
         grid-row: 1 / 3;
         grid-column: 3 / 6;
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
     
@@ -1384,7 +1390,7 @@ a {
         grid-row: 1;
         grid-column: 5;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
     }
     
     .default-page .intro-summary p {
@@ -1410,31 +1416,41 @@ a {
         visibility: visible;
     }
 
-    .projectsDisplay .social {
+    .projectsDisplay .social, .aboutDisplay .social {
         width: 40%;
         position: fixed;
         bottom: 0%;
     }
-    
-    .summary {
-        height: 100vh;
-        display: grid;
-        grid-template: 35% 35% 30% / 20% 20% 10% 10% 40%;
-    }
 
-    .projectsDisplay{
+    .projectsDisplay, .aboutDisplay{
         display: grid;
-        grid-template: 30vh 30vh 15vh 20vh / 20% 20% 5% 50% 5%;
+        grid-template: 30vh 30vh 15vh 20vh / 40% 5% 50% 5%;
     }
     
-    .projectsContainer {
-        grid-column: 4;
+    .projectsContainer, .aboutContainer {
+        grid-column: 3;
         grid-row: 2 / 6;
         display: flex;
         flex-direction: column;
         width: 100%;
         justify-content:space-around;
         padding-top: 0%;
+    }
+
+    .summary {
+        display: grid;
+        grid-template: 15% 30% 30% 25% / 20% 20% 10% 10% 40%;
+        grid-gap: 5% 0%;
+    }
+
+    .main-core {
+        height: fit-content;
+        margin-bottom: 20%;
+    }
+
+    .main-skills {
+        padding-top: 10%;
+        margin-bottom: 10%;
     }
     
     .headingView {
@@ -1447,7 +1463,7 @@ a {
         text-align: center;
     }
 
-    .projectsDisplay .headingView {
+    .projectsDisplay .headingView, .aboutDisplay .headingView {
         position: fixed;
         width: 40%;
         height:100vh;
@@ -1476,49 +1492,29 @@ a {
         padding: 15px 40px;
         border-radius: 25px;
     }
-    
+
     .section-heading {
-        grid-row: 1 / 3;
-        grid-column: 1 / 3;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        width: 75%;
-        margin-top: 15%;
-        margin-left: 5%;
-        justify-content: flex-start;
+        grid-row: 1;
+        grid-column: 1 / 7;
     }
-    
+
     .section-content {
-        display: flex;
-        flex-wrap: wrap;
-        grid-column: 3 / 6;
-        grid-row: 1 / 4;
+        grid-column: 1 / 6;
+        grid-row: 2 / 4;
         justify-content: center;
     }
 
     .about-core {
-        padding: 15% 5% 5% 10%;
+        height: fit-content;
+        padding: 5%;
     }
 
     .about-core > * {
         flex: 1 1 40%;
         font-size: 1.1em;
         letter-spacing: 2px;
-        margin: 2% 4% 2% 4%;
+        margin: 10% 5%;
         justify-content: space-around;
-    }
-
-    .about-skills {
-        display: grid;
-        grid-template: 40% 30% 30% / 100%;
-    }
-    
-    .skill-row {
-        display: grid;
-        grid-template: 100% / 35% 60%;
-        grid-gap: 5%;
-        align-items: center;
     }
 
     .skill-group {
@@ -1537,7 +1533,11 @@ a {
     }
 
     .back-detail {
-        display: block;
+        display: grid;
+        grid-row: 4;
+        grid-column: 1 / 6;
+        justify-self: center;
+        align-self: end;
     }
     
     .back-text {
@@ -1545,9 +1545,7 @@ a {
         color: var(--text_col3);
         font-size: 2.2em;
         letter-spacing: 4px;
-        padding: 3% 6%;
-        position: relative;
-        bottom: 25%;
+        padding: 0% 10%;
     }
 
     .cardImg {
