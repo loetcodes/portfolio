@@ -1382,6 +1382,8 @@ a {
     .detailText {
         font-size: 1.1em;
         line-height: 1.6em;
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
 
     .intro-contact {
