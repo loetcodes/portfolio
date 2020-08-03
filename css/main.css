@@ -34,7 +34,6 @@
 
     --tile_shadow: #5c5c5c;
     --line_col0: #000000;
-    --gradient_start: var(--background_col1);
     --img_filter: none;
 }
 
@@ -130,6 +129,11 @@ body {
     height: 125vmax;
 }
 
+.main-contact .main-summary {
+    grid-template: 32% 30% 30% 8% / 20% 80%;
+    grid-gap: 5% 0;
+}
+
 .about-view .main-summary {
     border-bottom: 1px solid #dcdcdc;
     border-bottom-color: var(--border_col);
@@ -209,7 +213,7 @@ body {
 }
 
 .intro-summary .descrBox {
-    background: linear-gradient(180deg, var(--gradient_start) 0%, var(--gradient_start) 80%, transparent 100%);
+    background: var(--background_col1);
 }
 
 .intro-summary .detailText {
