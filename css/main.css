@@ -9,6 +9,7 @@
     --text_col2: #dfdfdf;
     --text_col3: #dfdfdf;
     --text_col4: #242424;
+    --background_text: #8989891f;
 
     --color1: #212121;
     --color2: #000000;
@@ -45,6 +46,7 @@
     --text_col0: #bdbdbd;
     --text_col3: #2fc1fa;
     --text_col4: #2fc1fa;
+    --background_text: #333333;
 
     --color2: #f5deb3;
 
@@ -207,7 +209,7 @@ body {
 }
 
 .intro-summary .descrBox {
-    background: linear-gradient(180deg, var(--gradient_start), transparent);
+    background: linear-gradient(180deg, var(--gradient_start) 0%, var(--gradient_start) 80%, transparent 100%);
 }
 
 .intro-summary .detailText {
@@ -234,7 +236,7 @@ body {
     align-items: center;
     align-self: flex-end;
     position: relative;
-    top: 25%;
+    bottom: -5%;
 }
 
 .scroll-tip::after{
@@ -334,7 +336,11 @@ body {
 }
 
 .aboutContainer > * {
-    margin: 15% 5%;
+    margin: 10% 0% 15% 0%;
+}
+
+.aboutContainer .descrBox {
+    width: 95%;
 }
 
 .headingView {
@@ -476,10 +482,6 @@ body {
 
 .back-detail {
     display: none;
-    grid-row: 3;
-    grid-column: 2;
-    width: fit-content;
-    height: fit-content;
 }
 
 .projectImg {
@@ -1437,6 +1439,11 @@ a {
         padding-top: 0%;
     }
 
+    .aboutContainer > * {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     .summary {
         display: grid;
         grid-template: 15% 30% 30% 25% / 20% 20% 10% 10% 40%;
@@ -1533,19 +1540,19 @@ a {
     }
 
     .back-detail {
-        display: grid;
-        grid-row: 4;
-        grid-column: 1 / 6;
-        justify-self: center;
-        align-self: end;
+        display: flex;
+        position: fixed;
+        right: 0%;
+        bottom: -10%;
+        padding: 1%;
+        z-index: -1;
     }
     
     .back-text {
-        background-color: var(--theme_col4);
-        color: var(--text_col3);
-        font-size: 2.2em;
+        color: var(--background_text);
+        font-size: 9em;
+        font-weight: 900;
         letter-spacing: 4px;
-        padding: 0% 10%;
     }
 
     .cardImg {
